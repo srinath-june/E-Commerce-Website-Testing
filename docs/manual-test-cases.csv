@@ -1,0 +1,11 @@
+Test Case ID,Module,Scenario,Preconditions,Steps,Test Data,Expected Result,Actual Result,Status,Execution Date
+TC_LOGIN_001,Login,Login with valid credentials,Login page is open,"Enter username and password; click Login","standard_user / secret_sauce",Products page opens,,,,
+TC_LOGIN_002,Login,Reject invalid password,Login page is open,"Enter valid username and incorrect password; click Login","standard_user / wrong_password",An authentication error is displayed,,,,
+TC_LOGIN_003,Login,Require username,Login page is open,"Leave fields empty; click Login",None,A username-required error is displayed,,,,
+TC_PRODUCT_001,Products,Show products with names and prices,User is logged in,Review every product card,None,Each product card shows a name and price,,,,
+TC_PRODUCT_002,Products,Sort products by price ascending,User is logged in,"Choose Price (low to high)",None,Product prices are in ascending order,,,,
+TC_CART_001,Cart,Add product to cart,User is logged in,"Add Sauce Labs Backpack; inspect cart badge",Sauce Labs Backpack,Cart badge shows one item,,,,
+TC_CART_002,Cart,Remove product from cart,One product is in cart,"Remove Sauce Labs Backpack; inspect cart badge",Sauce Labs Backpack,Cart badge is no longer shown,,,,
+TC_CHECKOUT_001,Checkout,Complete an order,User is logged in,"Add a product; open cart; enter customer details; continue; finish","Taylor / Tester / 10001",Order confirmation is displayed,,,,
+TC_NAV_001,Navigation,Return to products from cart,User is logged in and cart is open,Click Continue Shopping,None,Products page opens,,,,
+TC_IMAGE_001,Products,Verify product images load,User is logged in,Inspect each product image,None,Each product image is visible and loaded,,,,
